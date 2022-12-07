@@ -1,0 +1,9 @@
+#macro VISIBLE_VIEW 0
+
+#macro CAMERA view_camera[VISIBLE_VIEW]
+
+#macro INITIAL_VIEW_X 0
+#macro INITIAL_VIEW_Y 0
+
+#macro BASE_VIEW_WIDTH 320
+#macro BASE_VIEW_HEIGHT 180
