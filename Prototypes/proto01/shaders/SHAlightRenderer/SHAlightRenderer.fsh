@@ -10,7 +10,7 @@ const float lightSurfaceHeight = 256.;
 const float lightRadius = 128.;
 const vec2 relativeLightRadiusInUV = vec2(lightRadius/lightSurfaceWidth, lightRadius/lightSurfaceHeight);
 
-float FOVAmplitude = radians(60.);
+float FOVAmplitude = radians(135.);
 float FOVHalfAmplitude = FOVAmplitude * .5;
 
 
@@ -36,6 +36,7 @@ void main()
 	
 	float finalAlpha = abs(v_vTexcoord.x - playerUVCoordinates.x) / relativeLightRadiusInUV.x * TexcoordAngleCos;
 	finalAlpha += abs(v_vTexcoord.y - playerUVCoordinates.y) / relativeLightRadiusInUV.y * TexcoordAngleSin;
+	finalAlpha += (angle / FOVHalfAmplitude);
 	
 	gl_FragColor = vec4(black.rgb, finalAlpha);
 }
